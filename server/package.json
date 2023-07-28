@@ -1,0 +1,39 @@
+{
+  "name": "server",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "start": "cross-env NODE_ENV=production node server.js"
+  },
+  "dependencies": {
+    "koa-xtpl": "^2.1.1"
+  },
+  "devDependencies": {
+    "apache-dubbo2-js": "^3.0.0-rc7",
+    "cross-env": "^5.2.0",
+    "dubbo-invoker": "^1.0.2",
+    "dubbo2.js": "^2.3.8",
+    "http-proxy-middleware": "^1.0.5",
+    "interpret-util": "0.0.6",
+    "jaeger-client": "^3.15.0",
+    "js-to-java": "^2.6.0",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-combine-routers": "^4.0.2",
+    "koa-compress": "^5.0.1",
+    "koa-mount": "^4.0.0",
+    "koa-router": "^10.0.1",
+    "koa-static": "^5.0.0",
+    "koa-websocket": "^6.0.0",
+    "koa2-proxy-middleware": "^0.0.4",
+    "lodash": "^4.17.11",
+    "log4js": "^4.3.1",
+    "module-alias": "*",
+    "nodemon": "^2.0.4",
+    "zone-context": "^1.0.0"
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "~": "."
+  }
+}

@@ -1,0 +1,15 @@
+'use strict';
+Object.defineProperty(exports, '__esModule', { value: true });
+const interpret_util_1 = require('interpret-util');
+exports.IPackageServiceWrapper = {
+  searchPackageDetail: interpret_util_1.argumentMap,
+};
+function IPackageService(dubbo) {
+  return dubbo.proxyService({
+    dubboInterface: 'cc.ewell.moe.api.service.IPackageService',
+    version: '1.0.0',
+    methods: exports.IPackageServiceWrapper,
+  });
+}
+exports.IPackageService = IPackageService;
+//generate by interpret-cli dubbo2.js

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>btn/输入框/搜索</title>
+    <desc>Created with Sketch.</desc>
+    <g id="btn/输入框/搜索" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(1.000000, 1.000000)" fill="#7F8694">
+            <path d="M6.5,12 C9.53756612,12 12,9.53756612 12,6.5 C12,3.46243388 9.53756612,1 6.5,1 C3.46243388,1 1,3.46243388 1,6.5 C1,9.53756612 3.46243388,12 6.5,12 Z M6.5,13 C2.91014913,13 0,10.0898509 0,6.5 C0,2.91014913 2.91014913,0 6.5,0 C10.0898509,0 13,2.91014913 13,6.5 C13,10.0898509 10.0898509,13 6.5,13 Z" id="Oval" fill-rule="nonzero"></path>
+            <path d="M11.4367319,10.4419477 L13.4367319,10.4419477 L13.4367319,13.6845884 C13.4367319,14.2368732 12.9890167,14.6845884 12.4367319,14.6845884 L12.4367319,14.6845884 C11.8844472,14.6845884 11.4367319,14.2368732 11.4367319,13.6845884 L11.4367319,10.4419477 Z" id="Rectangle" transform="translate(12.436732, 12.563268) rotate(-45.000000) translate(-12.436732, -12.563268) "></path>
+        </g>
+    </g>
+</svg>

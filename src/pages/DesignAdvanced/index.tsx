@@ -13,6 +13,7 @@ import Setting from './components/Setting';
 import DraggedCard from './components/DraggedCard';
 import { TYPE_ENUM, reducer } from './util';
 import FormItem from './components/CustomFormItem';
+import Layout from './components/Layout';
 
 /** 自定义FormItem 
  * @param id 拖拽到面板中时生成，作为这个field的name
@@ -83,9 +84,65 @@ const Design: React.FC = () => {
             Checkbox,
             DatePicker,
             FormGrid,
-            ArrayCards
+            ArrayCards,
+            Layout
         },
     });
+
+    const schema = {
+        type: 'object',
+        properties: {
+            layout1: {
+                type: 'void',
+                'x-component': 'Layout',
+                'x-component-props': {
+                    type: 'card',
+                    title: 'card示例',
+                    schema: {
+                        type: 'object',
+                        properties: {
+                            layout2: {
+                                type: 'void',
+                                'x-component': 'Layout',
+                                'x-component-props': {
+                                    type: 'card',
+                                    title: 'card嵌套1示例',
+                                    schema: {
+                                        type: 'object',
+                                        properties: {
+                                            aaa3: {
+                                                type: 'string',
+                                                'x-decorator': 'FormItem',
+                                                'x-component': 'Input',
+                                            },
+                                            layout3: {
+                                                type: 'void',
+                                                'x-component': 'Layout',
+                                                'x-component-props': {
+                                                    type: 'card',
+                                                    title: 'card嵌套2示例',
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                            },
+                            aaa2: {
+                                type: 'string',
+                                'x-decorator': 'FormItem',
+                                'x-component': 'Select',
+                            }
+                        }
+                    }
+                },
+            }
+        },
+        aaa: {
+            type: 'string',
+            'x-decorator': 'FormItem',
+            'x-component': 'Select',
+        }
+    }
 
     return (
         <div className='design-editor'>
@@ -124,7 +181,7 @@ const Design: React.FC = () => {
                 <div ref={dropRef} className='center-panel'>
                     <FormProvider form={form}>
                         {
-                            React.useMemo(() => <SchemaField schema={state['schema']} />, [state['schema']])
+                            React.useMemo(() => <SchemaField schema={schema} />, [schema])
                         }
                     </FormProvider>
                 </div>

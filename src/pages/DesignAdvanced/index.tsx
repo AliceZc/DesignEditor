@@ -5,7 +5,7 @@ import { HTML5Backend } from 'react-dnd-html5-backend';
 import { DndProvider, useDrop } from 'react-dnd';
 import { createForm } from '@formily/core';
 import { FormProvider, createSchemaField } from '@formily/react';
-import { Input, Select, FormLayout, Radio, Checkbox, DatePicker, FormGrid, ArrayCards } from '@formily/antd';
+import { Input, Select, FormLayout, Radio, Checkbox, DatePicker, ArrayCards } from '@formily/antd';
 const { Panel } = Collapse;
 import './index.less'
 import _ from 'lodash';
@@ -13,7 +13,7 @@ import Setting from './components/Setting';
 import DraggedCard from './components/DraggedCard';
 import { TYPE_ENUM, reducer } from './util';
 import FormItem from './components/CustomFormItem';
-import Layout from './components/Layout';
+import { Card, FormGrid } from './components/Layout';
 
 /** 自定义FormItem 
  * @param id 拖拽到面板中时生成，作为这个field的name
@@ -85,7 +85,7 @@ const Design: React.FC = () => {
             DatePicker,
             FormGrid,
             ArrayCards,
-            Layout
+            Card,
         },
     });
 
@@ -93,55 +93,124 @@ const Design: React.FC = () => {
         type: 'object',
         properties: {
             layout1: {
-                type: 'void',
-                'x-component': 'Layout',
-                'x-component-props': {
-                    type: 'card',
-                    title: 'card示例',
-                    schema: {
-                        type: 'object',
-                        properties: {
-                            layout2: {
-                                type: 'void',
-                                'x-component': 'Layout',
-                                'x-component-props': {
-                                    type: 'card',
-                                    title: 'card嵌套1示例',
-                                    schema: {
-                                        type: 'object',
-                                        properties: {
-                                            aaa3: {
-                                                type: 'string',
-                                                'x-decorator': 'FormItem',
-                                                'x-component': 'Input',
-                                            },
-                                            layout3: {
-                                                type: 'void',
-                                                'x-component': 'Layout',
-                                                'x-component-props': {
-                                                    type: 'card',
-                                                    title: 'card嵌套2示例',
-                                                }
-                                            }
-                                        }
+                "type": "void",
+                "x-component": "FormGrid",
+                "x-validator": [],
+                "x-component-props": {},
+                "x-designable-id": "70djgj40pht",
+                "properties": {
+                    "ptfu26j82rx": {
+                        "type": "void",
+                        "x-component": "FormGrid.GridColumn",
+                        "x-validator": [],
+                        "x-component-props": {},
+                        "x-designable-id": "ptfu26j82rx",
+                        "properties": {
+                            "g9yk9ouuax1": {
+                                "type": "void",
+                                "x-component": "FormGrid",
+                                "x-validator": [],
+                                "x-component-props": {},
+                                "x-designable-id": "g9yk9ouuax1",
+                                "properties": {
+                                    "kpk1l10qjk0": {
+                                        "type": "void",
+                                        "x-component": "FormGrid.GridColumn",
+                                        "x-designable-id": "kpk1l10qjk0",
+                                        "x-index": 0
+                                    },
+                                    "jzw6cgxu6aq": {
+                                        "type": "void",
+                                        "x-component": "FormGrid.GridColumn",
+                                        "x-designable-id": "jzw6cgxu6aq",
+                                        "x-index": 1
+                                    },
+                                    "cl65ik0epl4": {
+                                        "type": "void",
+                                        "x-component": "FormGrid.GridColumn",
+                                        "x-designable-id": "cl65ik0epl4",
+                                        "x-index": 2
                                     }
                                 },
-                            },
-                            aaa2: {
-                                type: 'string',
-                                'x-decorator': 'FormItem',
-                                'x-component': 'Select',
+                                "x-index": 0
                             }
-                        }
+                        },
+                        "x-index": 0
+                    },
+                    "ygeevx72vw3": {
+                        "type": "void",
+                        "x-component": "FormGrid.GridColumn",
+                        "x-designable-id": "ygeevx72vw3",
+                        "x-index": 1
+                    },
+                    "vcx2uuva0qz": {
+                        "type": "void",
+                        "x-component": "FormGrid.GridColumn",
+                        "x-designable-id": "vcx2uuva0qz",
+                        "x-index": 2
                     }
                 },
-            }
+                "x-index": 0
+            },
+            aaa: {
+                type: 'string',
+                'x-decorator': 'FormItem',
+                'x-component': 'Select',
+                "x-index": 1
+            },
+            layout2: {
+                "type": "void",
+                "x-component": "Card",
+                "x-component-props": {
+                    "title": "Title"
+                },
+                "x-designable-id": "uzjj977fxnt",
+                "properties": {
+                    "2whwqgrecx2": {
+                        "type": "string",
+                        "title": "Input",
+                        "x-decorator": "FormItem",
+                        "x-component": "Input",
+                        "x-validator": [],
+                        "x-component-props": {},
+                        "x-decorator-props": {},
+                        "x-designable-id": "2whwqgrecx2",
+                        "x-index": 0
+                    },
+                    "x2kk1v5a9rs": {
+                        "type": "void",
+                        "x-component": "Card",
+                        "x-component-props": {
+                            "title": "Title"
+                        },
+                        "x-designable-id": "x2kk1v5a9rs",
+                        "properties": {
+                            "yehnlexulvi": {
+                                "type": "string",
+                                "title": "Input",
+                                "x-decorator": "FormItem",
+                                "x-component": "Input",
+                                "x-validator": [],
+                                "x-component-props": {},
+                                "x-decorator-props": {},
+                                "x-designable-id": "yehnlexulvi",
+                                "x-index": 0
+                            },
+                            "x2kk222222": {
+                                "type": "void",
+                                "x-component": "Card",
+                                "x-component-props": {
+                                    "title": "Title"
+                                },
+                                "x-index": 1
+                            },
+                        },
+                        "x-index": 1
+                    }
+                },
+                "x-index": 2
+            },
         },
-        aaa: {
-            type: 'string',
-            'x-decorator': 'FormItem',
-            'x-component': 'Select',
-        }
     }
 
     return (

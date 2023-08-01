@@ -1,4 +1,4 @@
-.custom-layout {
+.custom-layout-card {
     margin-bottom: 10px;
     box-sizing: border-box;
     margin: 0;
@@ -30,17 +30,19 @@
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    
+
     .custom-layout-body {
         padding: 24px;
         min-height: 300px;
         text-align: center;
+
         .no-data {
             background-image: url('../../../../assets/svg/noData.svg');
             display: inline-block;
             width: 350px;
             height: 220px;
             position: relative;
+
             &::after {
                 content: 'no-data';
                 position: absolute;
@@ -48,6 +50,67 @@
                 right: 0;
                 left: 0;
                 color: #0F9096;
+            }
+        }
+    }
+}
+
+.custom-layout-grid {
+    .ant-formily-grid-layout {
+        .custom-layout-grid-item {
+            border: 1px solid transparent;
+            .placeholder {
+                height: 60px;
+                background-color: #f0f0f0;
+                border: 1px dashed #aaa;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #666;
+                font-weight: lighter;
+                font-size: 13px;
+            }
+            &:hover {
+                border: 1px dashed #1890ff;
+            }
+            &.active .placeholder {
+                border: 1px solid #1890ff;
+                position: relative;
+                .delete-icon {
+                    position: absolute;
+                    content: '';
+                    background-image: url('../../../../assets/svg/delete-icon.svg');
+                    width: 20px;
+                    height: 20px;
+                    display: inline-block;
+                    position: absolute;
+                    top: -20px;
+                    right: 0;
+                    cursor: pointer;
+                }    
+            }
+        }
+    }
+    .custom-layout-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        >span {
+            color: rgba(0, 0, 0, 0.45);
+            outline: none;
+            cursor: pointer;
+            transition: color 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 10px;
+
+            &:hover {
+                color: #1890ff;
             }
         }
     }
